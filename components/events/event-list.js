@@ -1,8 +1,14 @@
 import EventItem from './event-item';
 import classes from './event-list.module.css';
-
+import { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 function EventList(props) {
   const { items } = props;
+
+  const { push } = useRouter();
+  useEffect(() => {
+    //push('/');
+ }, []);
 
   return (
     <ul className={classes.list}>
